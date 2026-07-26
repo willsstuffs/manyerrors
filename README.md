@@ -1,10 +1,8 @@
 manyerrors
 ============
 [<img alt="docs" src="https://img.shields.io/docsrs/manyerrrors?logo=docs.rs">](https://docs.rs/manyerrors/)
-[<img alt="crates" src="https://img.shields.io/crates/v/manyerrors?logo=rust
-">](https://crates.io/manyerrors/)
-[<img alt="github" src="https://img.shields.io/badge/github-willsstuffs/manyerrors-cyan?logo=github
-">](https://github.com/willsstuffs/manyerrors/)
+[<img alt="crates" src="https://img.shields.io/crates/v/manyerrors?logo=rust">](https://crates.io/manyerrors/)
+[<img alt="github" src="https://img.shields.io/badge/github-willsstuffs/manyerrors-cyan?logo=github">](https://github.com/willsstuffs/manyerrors/)
 
 A library for when many errors may occur at one time, but you don't want to short circuit on
 the first error found.
