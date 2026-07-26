@@ -1,0 +1,22 @@
+[package]
+name = "manyerrors"
+version = "1.0.0"
+edition = "2024"
+readme = "README.md"
+repository = "https://github.com/willsstuffs/manyerrors"
+homepage = "https://github.com/willsstuffs/manyerrors"
+documentation = "https://docs.rs/manyerrors"
+license = "MIT OR Apache-2.0"
+categories = ["rust-patterns"]
+keywords = ["error", "errors", "error-handling"]
+
+[features]
+anyhow = ["dep:anyhow"]
+
+[[example]]
+name = "anyhow"
+required-features = ["anyhow"]
+
+[dependencies]
+anyhow = {version = "1.0.104", optional = true}
+manyerrors_proc = { path = "manyerrors_proc" }
