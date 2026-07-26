@@ -1,6 +1,6 @@
 manyerrors
 ============
-[<img alt="docs" src="https://img.shields.io/docsrs/manyerrrors?logo=docs.rs">](https://docs.rs/manyerrors/)
+[<img alt="docs" src="https://img.shields.io/docsrs/manyerrors?logo=docs.rs">](https://docs.rs/manyerrors/)
 [<img alt="crates" src="https://img.shields.io/crates/v/manyerrors?logo=rust">](https://crates.io/manyerrors/)
 [<img alt="github" src="https://img.shields.io/badge/github-willsstuffs/manyerrors-cyan?logo=github">](https://github.com/willsstuffs/manyerrors/)
 
