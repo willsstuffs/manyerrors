@@ -9,6 +9,7 @@ documentation = "https://docs.rs/manyerrors"
 license = "MIT OR Apache-2.0"
 categories = ["rust-patterns"]
 keywords = ["error", "errors", "error-handling"]
+description = "A rust crate for creating functions that may return multiple errors."
 
 [features]
 anyhow = ["dep:anyhow"]
@@ -19,4 +20,4 @@ required-features = ["anyhow"]
 
 [dependencies]
 anyhow = {version = "1.0.104", optional = true}
-manyerrors_proc = { path = "manyerrors_proc" }
+manyerrors_proc = { path = "manyerrors_proc", version = "1.0.0" }
