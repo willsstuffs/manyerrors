@@ -52,6 +52,38 @@ pub fn stash(input: TokenStream) -> TokenStream {
     r.unwrap().into()
 }
 
+///Takes the input, runs it like typical rust code, but the ? operator only short circuits the inner body
+/// of the macro instead of the entire function. 
+/// 
+/// If the input returns a value implicitly (via an expression that doesn't
+/// end in a `;`), this value is wrapped in a `Some()` value and returned from the macro.
+/// 
+/// # example
+/// 
+/// ```
+/// for i in some_list {
+///     stash_fn! {
+///         let new_value = some_operation(i)?;
+///         println("New value: {new_value}");
+///     }
+/// }
+/// ```
+#[proc_macro]
+pub fn stash_fn(input: TokenStream) -> TokenStream {
+    let i: proc_macro2::TokenStream = input.into();
+    quote! {
+        {
+            let __manyerrors_internal_closure__ = || -> Result<_,manyerrors::Errors<_>> {
+                let __manyerrors_internal_ok_val__ = { #i };
+                Ok( __manyerrors_internal_ok_val__ )
+            };
+            manyerrors::stash!(
+                __manyerrors_internal_closure__()
+            )
+        }
+    }.into()
+}
+
 ///Main attribute macro for functions that return `Result<O,Errors<T>>`.
 ///Allows use of the `stash!` macro for stashing errors to be returned at the end of a function.
 /// 

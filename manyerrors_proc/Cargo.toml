@@ -1,6 +1,6 @@
 [package]
 name = "manyerrors_proc"
-version = "1.0.0"
+version = "1.0.2"
 edition = "2024"
 exclude = ["target/*"]
 description = "helper library for manyerrors"

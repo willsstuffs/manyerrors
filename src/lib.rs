@@ -1,5 +1,5 @@
 use std::error::Error;
-pub use manyerrors_proc::{manyerrors,stash,iter_stash};
+pub use manyerrors_proc::*;
 
 
 ///Struct capable of containing many errors.
